@@ -1,9 +1,14 @@
-pragma solidity ^0.8.0
+pragma solidity ^0.8.0;
+
 contract whitelist {
+
   uint8 public  maxWhitelistedAddress;
+
+
+  mapping(address => bool) public whitelistedAddress;
   // keep track of numbers of address
   uint8 public numAddressesWhitelisted;
-  mapping(address =>bool) public whitelistedAddress
+  
   constructor(uint8 _maxWhitelistedAddress){
     maxWhitelistedAddress = _maxWhitelistedAddress;
   }
